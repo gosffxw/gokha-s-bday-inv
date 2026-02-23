@@ -1,0 +1,282 @@
+:root {
+    --wine: #4A0E1A;
+    --deep-wine: #2F0811;
+    --beige: #F3E6D6;
+    --rose-smoke: #C98FA3;
+    --black: #111111;
+    --brown: #6B3E2E;
+}
+
+/* ================== ОБЩЕЕ ================== */
+
+body {
+    margin: 0;
+    font-family: 'Cormorant', serif;
+    background: var(--wine);
+    color: var(--beige);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+}
+
+section {
+    padding: 100px 20px;
+}
+
+
+
+/* ================== HERO ================== */
+.hero h1 {
+    font-family: 'Allura', cursive;
+    font-size: 90px;
+    letter-spacing: 2px;
+    margin: 0;
+    color: var(--beige);
+    text-shadow: 0 0 20px rgba(201, 143, 163, 0.4);
+}
+.hero {
+    background: var(--wine);
+    color: var(--beige);
+    padding: 150px 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    margin: 0;
+}
+
+.age {
+    margin-top: 15px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    color: var(--rose-smoke);
+}
+
+.date {
+    margin-top: 25px;
+    font-size: 18px;
+    color: var(--beige);
+}
+.hero-img {
+    width: 320px;          /* меняй это число */
+    max-width: 90%;
+    margin-top: 40px;
+    border-radius: 12px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+}
+
+/* ================== COUNTDOWN ================== */
+
+.countdown-section {
+    background: var(--deep-wine);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.countdown div {
+    background: var(--wine);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.countdown span {
+    display: block;
+    font-size: 46px;
+    font-weight: bold;
+    color: var(--rose-smoke);
+}
+
+.countdown p {
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--beige);
+}
+
+/* ================== LOCATION ================== */
+
+.location {
+    background: var(--wine);
+}
+
+.location h2 {
+    color: var(--beige);
+}
+
+.venue-img {
+    width: 400px;
+    margin: 40px 0;
+    border-radius: 8px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+}
+
+/* ================== КНОПКИ ================== */
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 12px;
+    padding: 16px 38px;
+    background: var(--brown);
+    color: var(--beige);
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--rose-smoke);
+    color: var(--black);
+}
+
+/* ================== ЛЕОПАРДОВАЯ КНОПКА ================== */
+
+.leopard {
+    background: url("images/leopard.jpg");
+    background-size: cover;
+    color: var(--black);
+    font-weight: bold;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.leopard:hover {
+    transform: translateY(-3px);
+}
+
+/* ================== DRESS CODE ================== */
+
+.dresscode {
+    background: var(--deep-wine);
+    color: var(--beige);
+}
+
+.dresscode p {
+    color: var(--rose-smoke);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* ================== ТОНКИЕ ДЕТАЛИ ================== */
+
+hr {
+    width: 80px;
+    height: 2px;
+    border: none;
+    background: var(--rose-smoke);
+    margin: 40px auto;
+}
+
+.small-text {
+    font-size: 14px;
+    color: var(--brown);
+    letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .countdown {
+        gap: 30px;
+    }
+
+    .venue-img {
+        width: 80%;
+    }
+
+}
+@media (max-width: 768px) {
+
+    section {
+        padding: 70px 20px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .age {
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+
+    .hero-img {
+        width: 220px;
+    }
+
+    /* Countdown в столбик */
+    .countdown {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .countdown div {
+        padding: 18px 20px;
+    }
+
+    .countdown span {
+        font-size: 32px;
+    }
+
+    /* Картинка заведения */
+    .venue-img {
+        width: 95%;
+    }
+
+    /* Кнопки в столбик */
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        padding: 14px 0;
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-img {
+        width: 180px;
+    }
+
+    .countdown span {
+        font-size: 26px;
+    }
+
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 60px;
+    }
+}
